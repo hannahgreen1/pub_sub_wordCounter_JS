@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const InputView = __webpack_require__(/*! ./views/input_view.js */ \"./src/views/input_view.js\");\nconst WordChecker = __webpack_require__(/*! ./models/word_checker.js */ \"./src/models/word_checker.js\");\nconst ResultView = __webpack_require__(/*! ./views/result_view.js */ \"./src/views/result_view.js\");\n\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("const InputView = __webpack_require__(/*! ./views/input_view.js */ \"./src/views/input_view.js\");\nconst WordChecker = __webpack_require__(/*! ./models/word_checker.js */ \"./src/models/word_checker.js\");\nconst ResultView = __webpack_require__(/*! ./views/result_view.js */ \"./src/views/result_view.js\");\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  console.log('JavaScript loaded');\n\n  const inputView = new InputView();\n  inputView.bindEvents();\n\n  const wordChecker = new WordChecker();\n  wordChecker.bindEvents();\n\n  const resultView = new ResultView();\n  resultView.bindEvents();\n});\n\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
