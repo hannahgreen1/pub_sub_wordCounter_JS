@@ -13,4 +13,14 @@ WordChecker.prototype.bindEvents = function(){
   })
 };
 
+WordChecker.prototype.wordCount = function(text){
+  let total = 0;
+  words = text.split(" ")
+    for (var i = 0; i < words.length; i++){
+      if (text(i) != "") {
+        total = ++;
+    }
+  };
+};
+
 module.exports = WordChecker;
