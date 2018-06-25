@@ -126,7 +126,7 @@ eval("\n\n//# sourceURL=webpack:///./src/models/word_checker.js?");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const PubSub = __webpack_require__(/*! ../helpers/pub_sub.js */ \"./src/helpers/pub_sub.js\");\nconst InputView = function () {\n\n};\n\n\n//# sourceURL=webpack:///./src/views/input_view.js?");
+eval("const PubSub = __webpack_require__(/*! ../helpers/pub_sub.js */ \"./src/helpers/pub_sub.js\");\nconst InputView = function () {\n\n};\n\nInputView.prototype.bindEvents = function () {\n  const input = document.querySelector('#text');\n  input.addEventListener('input',(evt) => {\n    const inputtedText = evt.target.value;\n    PubSub.publish('InputView:text-inputted', inputtedText)\n  })\n};\n\nmodule.exports = InputView;\n\n\n//# sourceURL=webpack:///./src/views/input_view.js?");
 
 /***/ }),
 
