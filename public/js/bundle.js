@@ -113,9 +113,9 @@ eval("const PubSub = {\n\tpublish: function(channel, payload) {\n    const event
   !*** ./src/models/word_checker.js ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (21:18)\\nYou may need an appropriate loader to handle this file type.\\n|     for (var i = 0; i < words.length; i++){\\n|       if (text(i) != \\\"\\\") {\\n>         total = ++;\\n|     }\\n|   };\");\n\n//# sourceURL=webpack:///./src/models/word_checker.js?");
+eval("const PubSub = __webpack_require__(/*! ../helpers/pub_sub.js */ \"./src/helpers/pub_sub.js\");\n\nconst WordChecker = function() {\n\n};\n\nWordChecker.prototype.bindEvents = function(){\n  PubSub.subscribe('InputView:text-inputted', (evt) =>{\n    const inputtedText = evt.detail;\n    const result = this.wordCount(inputtedText);\n    PubSub.publish('WordChecker:result', result);\n    console.log(result);\n  })\n};\n\nWordChecker.prototype.wordCount = function(text){\n  return text.split(\" \").length;\n};\n\nmodule.exports = WordChecker;\n\n\n//# sourceURL=webpack:///./src/models/word_checker.js?");
 
 /***/ }),
 
