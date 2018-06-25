@@ -137,7 +137,7 @@ eval("const PubSub = __webpack_require__(/*! ../helpers/pub_sub.js */ \"./src/he
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const PubSub = __webpack_require__(/*! ../helpers/pub_sub.js */ \"./src/helpers/pub_sub.js\");\nconst ResultView = function () {\n\n};\n\nResultView.prototype.updateView = function (result) {\n\n};\n\nResultView.prototype.bindEvents = function () {\n  PubSub.subscribe('WordChecker:result', (event) => {\n    const result = event.detail;\n    this.updateView(result);\n  });\n};\n\n\n\nmodule.exports = ResultView;\n\n\n//# sourceURL=webpack:///./src/views/result_view.js?");
+eval("const PubSub = __webpack_require__(/*! ../helpers/pub_sub.js */ \"./src/helpers/pub_sub.js\");\nconst ResultView = function () {\n\n};\n\nResultView.prototype.updateView = function (result) {\nconst resultElement = document.querySelector('#result');\nresultElement.textContent = `Words : ${result}`\n};\n\nResultView.prototype.bindEvents = function () {\n  PubSub.subscribe('WordChecker:result', (event) => {\n    const result = event.detail;\n    this.updateView(result);\n  });\n};\n\n\n\nmodule.exports = ResultView;\n\n\n//# sourceURL=webpack:///./src/views/result_view.js?");
 
 /***/ })
 

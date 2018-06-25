@@ -4,7 +4,8 @@ const ResultView = function () {
 };
 
 ResultView.prototype.updateView = function (result) {
-
+const resultElement = document.querySelector('#result');
+resultElement.textContent = `Words : ${result}`
 };
 
 ResultView.prototype.bindEvents = function () {
